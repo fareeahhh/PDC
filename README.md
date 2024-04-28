@@ -1,7 +1,7 @@
 # Project: Parallel and Serial Implementations of K-Shortest Path Algorithm
 
 ## 1. Introduction
-This experiment compares the performance of parallel and serial implementations of the k-shortest path algorithm, which identifies the top k shortest paths between a source and destination in a graph. The parallel version employs MPI for distributed memory parallelism and OpenMP for shared memory parallelism.
+This experiment compares the performance of parallel and serial implementations of the k-shortest path algorithm, which identifies the top k-shortest paths between a source and destination in a graph. The parallel version employs MPI for distributed memory parallelism and OpenMP for shared memory parallelism.
 
 ## 2. Experimental Setup
 
@@ -23,13 +23,12 @@ This experiment compares the performance of parallel and serial implementations 
 - OpenMP Library: `omp.h`
 - Time Library: `time.h`
 
-### Compile and Run Instructions
+## 3. Compile and Run Instructions
 **Parallel:**
-```bash
-mpicc -fopenmp -o parallel parallel.c priorityqueue.c 
-mpirun -n 3 ./parallel
+- mpicc -fopenmp -o parallel parallel.c priorityqueue.c 
+- mpirun -n 3 ./parallel
 
-**Parallel:**
-gcc -o program serial.c priorityqueue.c
-./program
+**Serial:**
+- gcc -o program serial.c priorityqueue.c
+- ./program
 
